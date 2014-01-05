@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.blstream.szczecin.kisiel.boleslaw</groupId>
+  <artifactId>zad2</artifactId>
+  <version>1.0.0</version>
+  <packaging>war</packaging>
+
+  <name>zad2</name>
+  <url>http://maven.apache.org</url>
+
+	<properties>
+		<spring.version>3.2.5.RELEASE</spring.version>
+		<jackson.version>1.9.13</jackson.version>
+		<jdk.version>1.6</jdk.version>
+	</properties>
+ 
+   <dependencies>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.4</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.1</version>
+      <scope>provided</scope>
+    </dependency>
+		<!-- Spring 3 dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Jackson JSON Mapper -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+  </dependencies>
+
+  <build>
+  	<finalName>hello</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat-compiler-plugin</artifactId>
+        <version>7</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
